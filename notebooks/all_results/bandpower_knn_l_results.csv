@@ -1,0 +1,587 @@
+Bandpower + KNN,54.66%, 12/19,L,[0],"freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,53.88%, 9/19,L,[1],"freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,50.72%, 11/19,L,[2],"freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,64.93%, 13/19,L,[3],"freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,60.08%, 11/19,L,[4],"freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,56.10%, 10/19,L,[5],"freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,50.31%, 9/19,L,[6],"freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,38.70%, 6/19,L,[7],"freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,40.50%, 7/19,L,[8],"freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,56.46%, 10/19,L,[9],"freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,56.18%, 11/19,L,[10],"freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,51.95%, 11/19,L,[11],"freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,61.49%, 11/19,L,[12],"freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,56.65%, 10/19,L,[13],"freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,51.81%, 10/19,L,[14],"freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,56.69%, 12/19,L,[15],"freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,49.61%, 8/19,L,[16],"freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,47.28%, 10/19,L,[17],"freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,64.73%, 11/19,L,[18],"freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,62.40%, 11/19,L,[19],"freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,62.03%, 14/19,L,[20],"freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,61.20%, 10/19,L,[21],"freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,60.58%, 13/19,L,[22],"freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,61.40%, 12/19,L,[23],"freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,51.65%, 9/19,L,[24],"freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,46.65%, 8/19,L,[25],"freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,48.79%, 7/19,L,[26],"freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,52.49%, 11/19,L,[27],"freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,49.37%, 9/19,L,[28],"freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,53.40%, 13/19,L,[29],"freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,51.33%, 10/19,L,[30],"freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,58.58%, 11/19,L,[31],"freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,56.47%, 11/19,L,[32],"freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,66.42%, 13/19,L,[33],"freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,51.09%, 8/19,L,[34],"freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,57.87%, 10/19,L,[35],"freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,73.12%, 14/19,L,[36],"freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,67.86%, 12/19,L,[37],"freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,65.81%, 12/19,L,[38],"freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,63.40%, 12/19,L,[39],"freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,59.68%, 12/19,L,[40],"freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,53.35%, 10/19,L,[41],"freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,50.66%, 10/19,L,[42],"freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,54.23%, 9/19,L,[43],"freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,51.01%, 9/19,L,[44],"freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,58.41%, 11/19,L,[45],"freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,54.31%, 11/19,L,[46],"freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,57.53%, 11/19,L,[47],"freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,56.45%, 10/19,L,[48],"freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,65.62%, 13/19,L,[49],"freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,63.47%, 12/19,L,[50],"freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,62.18%, 11/19,L,[51],"freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,49.74%, 8/19,L,[52],"freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,52.47%, 11/19,L,[53],"freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,42.96%, 8/19,L,[54],"freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,48.10%, 8/19,L,[55],"freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,40.71%, 6/19,L,[56],"freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,50.54%, 9/19,L,[57],"freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,46.83%, 9/19,L,[58],"freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,35.22%, 6/19,L,[59],"freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,51.58%, 9/19,L,[60],"freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,70.44%, 12/19,L,"[36, 0]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,70.23%, 13/19,L,"[36, 1]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,72.98%, 15/19,L,"[36, 2]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,69.91%, 15/19,L,"[36, 3]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,60.82%, 11/19,L,"[36, 4]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,66.38%, 12/19,L,"[36, 5]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,65.54%, 14/19,L,"[36, 6]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,68.27%, 13/19,L,"[36, 7]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,68.40%, 14/19,L,"[36, 8]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,69.26%, 12/19,L,"[36, 9]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,70.75%, 14/19,L,"[36, 10]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,74.44%, 16/19,L,"[36, 11]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,70.72%, 15/19,L,"[36, 12]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,68.44%, 13/19,L,"[36, 13]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,72.79%, 15/19,L,"[36, 14]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,70.52%, 15/19,L,"[36, 15]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,71.73%, 14/19,L,"[36, 16]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,72.64%, 16/19,L,"[36, 17]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,67.87%, 14/19,L,"[36, 18]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,70.37%, 14/19,L,"[36, 19]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,72.12%, 14/19,L,"[36, 20]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,69.98%, 14/19,L,"[36, 21]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,65.72%, 12/19,L,"[36, 22]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,66.54%, 13/19,L,"[36, 23]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,65.30%, 14/19,L,"[36, 24]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,70.12%, 12/19,L,"[36, 25]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,67.27%, 14/19,L,"[36, 26]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,69.25%, 13/19,L,"[36, 27]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,69.81%, 13/19,L,"[36, 28]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,67.14%, 14/19,L,"[36, 29]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,65.53%, 14/19,L,"[36, 30]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,68.02%, 14/19,L,"[36, 31]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,67.12%, 14/19,L,"[36, 32]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,71.85%, 13/19,L,"[36, 33]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,70.67%, 14/19,L,"[36, 34]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,71.87%, 14/19,L,"[36, 35]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,73.12%, 14/19,L,"[36, 36]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,72.58%, 14/19,L,"[36, 37]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,71.67%, 14/19,L,"[36, 38]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,66.18%, 12/19,L,"[36, 39]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,68.05%, 13/19,L,"[36, 40]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,62.93%, 12/19,L,"[36, 41]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,67.49%, 13/19,L,"[36, 42]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,68.66%, 13/19,L,"[36, 43]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,69.96%, 15/19,L,"[36, 44]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,67.58%, 13/19,L,"[36, 45]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,69.15%, 13/19,L,"[36, 46]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,67.96%, 14/19,L,"[36, 47]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,71.63%, 14/19,L,"[36, 48]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,68.93%, 15/19,L,"[36, 49]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,70.50%, 14/19,L,"[36, 50]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,69.89%, 13/19,L,"[36, 51]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,62.18%, 12/19,L,"[36, 52]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,61.47%, 12/19,L,"[36, 53]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,60.00%, 12/19,L,"[36, 54]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,60.96%, 12/19,L,"[36, 55]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,64.44%, 12/19,L,"[36, 56]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,65.27%, 13/19,L,"[36, 57]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,56.20%, 9/19,L,"[36, 58]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,60.21%, 12/19,L,"[36, 59]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,68.60%, 15/19,L,"[36, 60]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,67.52%, 14/19,L,"[11, 36, 0]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,67.56%, 14/19,L,"[11, 36, 1]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,72.94%, 16/19,L,"[11, 36, 2]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,68.26%, 14/19,L,"[11, 36, 3]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,63.79%, 12/19,L,"[11, 36, 4]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,61.96%, 13/19,L,"[11, 36, 5]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,65.90%, 13/19,L,"[11, 36, 6]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,68.86%, 13/19,L,"[11, 36, 7]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,65.26%, 13/19,L,"[11, 36, 8]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,64.94%, 13/19,L,"[11, 36, 9]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,66.04%, 13/19,L,"[11, 36, 10]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,72.30%, 15/19,L,"[11, 36, 11]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,67.11%, 14/19,L,"[11, 36, 12]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,69.22%, 14/19,L,"[11, 36, 13]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,67.87%, 14/19,L,"[11, 36, 14]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,69.43%, 13/19,L,"[11, 36, 15]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,72.53%, 14/19,L,"[11, 36, 16]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,72.86%, 17/19,L,"[11, 36, 17]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,67.21%, 14/19,L,"[11, 36, 18]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,68.71%, 15/19,L,"[11, 36, 19]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,73.97%, 16/19,L,"[11, 36, 20]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,67.84%, 14/19,L,"[11, 36, 21]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,66.06%, 13/19,L,"[11, 36, 22]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,65.54%, 14/19,L,"[11, 36, 23]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,67.04%, 14/19,L,"[11, 36, 24]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,70.38%, 12/19,L,"[11, 36, 25]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,63.76%, 13/19,L,"[11, 36, 26]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,68.70%, 14/19,L,"[11, 36, 27]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,67.73%, 14/19,L,"[11, 36, 28]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,68.31%, 15/19,L,"[11, 36, 29]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,65.63%, 12/19,L,"[11, 36, 30]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,68.15%, 13/19,L,"[11, 36, 31]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,66.26%, 14/19,L,"[11, 36, 32]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,70.39%, 13/19,L,"[11, 36, 33]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,65.85%, 14/19,L,"[11, 36, 34]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,67.93%, 14/19,L,"[11, 36, 35]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,72.83%, 15/19,L,"[11, 36, 36]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,73.10%, 15/19,L,"[11, 36, 37]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,73.01%, 16/19,L,"[11, 36, 38]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,67.38%, 13/19,L,"[11, 36, 39]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,67.05%, 14/19,L,"[11, 36, 40]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,66.13%, 14/19,L,"[11, 36, 41]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,64.51%, 12/19,L,"[11, 36, 42]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,69.56%, 14/19,L,"[11, 36, 43]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,65.57%, 12/19,L,"[11, 36, 44]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,67.56%, 14/19,L,"[11, 36, 45]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,67.11%, 14/19,L,"[11, 36, 46]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,69.83%, 15/19,L,"[11, 36, 47]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,67.25%, 14/19,L,"[11, 36, 48]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,66.06%, 13/19,L,"[11, 36, 49]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,70.94%, 15/19,L,"[11, 36, 50]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,70.68%, 15/19,L,"[11, 36, 51]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,58.18%, 12/19,L,"[11, 36, 52]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,61.89%, 13/19,L,"[11, 36, 53]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,58.34%, 12/19,L,"[11, 36, 54]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,58.52%, 10/19,L,"[11, 36, 55]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,61.07%, 11/19,L,"[11, 36, 56]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,62.46%, 13/19,L,"[11, 36, 57]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,55.48%, 9/19,L,"[11, 36, 58]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,61.43%, 11/19,L,"[11, 36, 59]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,67.66%, 14/19,L,"[11, 36, 60]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,68.08%, 15/19,L,"[11, 36]","freq bands 4-8,8-13,13-30, k=1"
+Bandpower + KNN,59.75%, 12/19,L,"[11, 36]","freq bands 4-8,8-13,13-30, k=2"
+Bandpower + KNN,70.10%, 15/19,L,"[11, 36]","freq bands 4-8,8-13,13-30, k=3"
+Bandpower + KNN,62.29%, 12/19,L,"[11, 36]","freq bands 4-8,8-13,13-30, k=4"
+Bandpower + KNN,70.81%, 15/19,L,"[11, 36]","freq bands 4-8,8-13,13-30, k=5"
+Bandpower + KNN,67.97%, 15/19,L,"[11, 36]","freq bands 4-8,8-13,13-30, k=6"
+Bandpower + KNN,71.93%, 15/19,L,"[11, 36]","freq bands 4-8,8-13,13-30, k=7"
+Bandpower + KNN,68.24%, 14/19,L,"[11, 36]","freq bands 4-8,8-13,13-30, k=8"
+Bandpower + KNN,72.08%, 15/19,L,"[11, 36]","freq bands 4-8,8-13,13-30, k=9"
+Bandpower + KNN,70.72%, 14/19,L,"[11, 36]","freq bands 4-8,8-13,13-30, k=10"
+Bandpower + KNN,73.55%, 16/19,L,"[11, 36]","freq bands 4-8,8-13,13-30, k=11"
+Bandpower + KNN,72.29%, 16/19,L,"[11, 36]","freq bands 4-8,8-13,13-30, k=12"
+Bandpower + KNN,73.35%, 16/19,L,"[11, 36]","freq bands 4-8,8-13,13-30, k=13"
+Bandpower + KNN,72.32%, 16/19,L,"[11, 36]","freq bands 4-8,8-13,13-30, k=14"
+Bandpower + KNN,73.20%, 16/19,L,"[11, 36]","freq bands 4-8,8-13,13-30, k=15"
+Bandpower + KNN,71.51%, 16/19,L,"[11, 36]","freq bands 4-8,8-13,13-30, k=16"
+Bandpower + KNN,72.89%, 15/19,L,"[11, 36]","freq bands 4-8,8-13,13-30, k=17"
+Bandpower + KNN,72.07%, 16/19,L,"[11, 36]","freq bands 4-8,8-13,13-30, k=18"
+Bandpower + KNN,73.48%, 16/19,L,"[11, 36]","freq bands 4-8,8-13,13-30, k=19"
+Bandpower + KNN,72.70%, 16/19,L,"[11, 36]","freq bands 4-8,8-13,13-30, k=20"
+Bandpower + KNN,73.93%, 16/19,L,"[11, 36]","freq bands 4-8,8-13,13-30, k=21"
+Bandpower + KNN,72.98%, 16/19,L,"[11, 36]","freq bands 4-8,8-13,13-30, k=22"
+Bandpower + KNN,74.59%, 16/19,L,"[11, 36]","freq bands 4-8,8-13,13-30, k=23"
+Bandpower + KNN,73.92%, 16/19,L,"[11, 36]","freq bands 4-8,8-13,13-30, k=24"
+Bandpower + KNN,74.53%, 16/19,L,"[11, 36]","freq bands 4-8,8-13,13-30, k=25"
+Bandpower + KNN,74.44%, 16/19,L,"[11, 36]","freq bands 4-8,8-13,13-30, k=26"
+Bandpower + KNN,75.65%, 16/19,L,"[11, 36]","freq bands 4-8,8-13,13-30, k=27"
+Bandpower + KNN,74.52%, 16/19,L,"[11, 36]","freq bands 4-8,8-13,13-30, k=28"
+Bandpower + KNN,74.79%, 16/19,L,"[11, 36]","freq bands 4-8,8-13,13-30, k=29"
+Bandpower + KNN,73.98%, 16/19,L,"[11, 36]","freq bands 4-8,8-13,13-30, k=30"
+Bandpower + KNN,74.86%, 16/19,L,"[11, 36]","freq bands 4-8,8-13,13-30, k=31"
+Bandpower + KNN,73.63%, 16/19,L,"[11, 36]","freq bands 4-8,8-13,13-30, k=32"
+Bandpower + KNN,74.53%, 16/19,L,"[11, 36]","freq bands 4-8,8-13,13-30, k=33"
+Bandpower + KNN,73.44%, 16/19,L,"[11, 36]","freq bands 4-8,8-13,13-30, k=34"
+Bandpower + KNN,74.28%, 16/19,L,"[11, 36]","freq bands 4-8,8-13,13-30, k=35"
+Bandpower + KNN,73.82%, 16/19,L,"[11, 36]","freq bands 4-8,8-13,13-30, k=36"
+Bandpower + KNN,73.99%, 16/19,L,"[11, 36]","freq bands 4-8,8-13,13-30, k=37"
+Bandpower + KNN,73.71%, 15/19,L,"[11, 36]","freq bands 4-8,8-13,13-30, k=38"
+Bandpower + KNN,74.44%, 16/19,L,"[11, 36]","freq bands 4-8,8-13,13-30, k=39"
+Bandpower + KNN,73.99%, 15/19,L,"[11, 36]","freq bands 4-8,8-13,13-30, k=40"
+Bandpower + KNN,74.80%, 16/19,L,"[11, 36]","freq bands 4-8,8-13,13-30, k=41"
+Bandpower + KNN,74.53%, 16/19,L,"[11, 36]","freq bands 4-8,8-13,13-30, k=42"
+Bandpower + KNN,74.96%, 16/19,L,"[11, 36]","freq bands 4-8,8-13,13-30, k=43"
+Bandpower + KNN,74.66%, 15/19,L,"[11, 36]","freq bands 4-8,8-13,13-30, k=44"
+Bandpower + KNN,74.96%, 15/19,L,"[11, 36]","freq bands 4-8,8-13,13-30, k=45"
+Bandpower + KNN,74.52%, 15/19,L,"[11, 36]","freq bands 4-8,8-13,13-30, k=46"
+Bandpower + KNN,74.61%, 14/19,L,"[11, 36]","freq bands 4-8,8-13,13-30, k=47"
+Bandpower + KNN,74.22%, 15/19,L,"[11, 36]","freq bands 4-8,8-13,13-30, k=48"
+Bandpower + KNN,74.49%, 14/19,L,"[11, 36]","freq bands 4-8,8-13,13-30, k=49"
+Bandpower + KNN,74.33%, 15/19,L,"[11, 36]","freq bands 4-8,8-13,13-30, k=50"
+Bandpower + KNN,74.81%, 14/19,L,"[11, 36]","freq bands 4-8,8-13,13-30, k=51"
+Bandpower + KNN,74.44%, 14/19,L,"[11, 36]","freq bands 4-8,8-13,13-30, k=52"
+Bandpower + KNN,74.23%, 14/19,L,"[11, 36]","freq bands 4-8,8-13,13-30, k=53"
+Bandpower + KNN,74.17%, 14/19,L,"[11, 36]","freq bands 4-8,8-13,13-30, k=54"
+Bandpower + KNN,74.16%, 14/19,L,"[11, 36]","freq bands 4-8,8-13,13-30, k=55"
+Bandpower + KNN,73.99%, 14/19,L,"[11, 36]","freq bands 4-8,8-13,13-30, k=56"
+Bandpower + KNN,74.28%, 14/19,L,"[11, 36]","freq bands 4-8,8-13,13-30, k=57"
+Bandpower + KNN,74.09%, 14/19,L,"[11, 36]","freq bands 4-8,8-13,13-30, k=58"
+Bandpower + KNN,74.35%, 14/19,L,"[11, 36]","freq bands 4-8,8-13,13-30, k=59"
+Bandpower + KNN,74.25%, 14/19,L,"[11, 36]","freq bands 4-8,8-13,13-30, k=60"
+Bandpower + KNN,74.64%, 14/19,L,"[11, 36]","freq bands 4-8,8-13,13-30, k=61"
+Bandpower + KNN,74.36%, 14/19,L,"[11, 36]","freq bands 4-8,8-13,13-30, k=62"
+Bandpower + KNN,74.54%, 14/19,L,"[11, 36]","freq bands 4-8,8-13,13-30, k=63"
+Bandpower + KNN,74.46%, 14/19,L,"[11, 36]","freq bands 4-8,8-13,13-30, k=64"
+Bandpower + KNN,74.26%, 14/19,L,"[11, 36]","freq bands 4-8,8-13,13-30, k=65"
+Bandpower + KNN,74.46%, 14/19,L,"[11, 36]","freq bands 4-8,8-13,13-30, k=66"
+Bandpower + KNN,74.25%, 14/19,L,"[11, 36]","freq bands 4-8,8-13,13-30, k=67"
+Bandpower + KNN,74.60%, 14/19,L,"[11, 36]","freq bands 4-8,8-13,13-30, k=68"
+Bandpower + KNN,74.35%, 14/19,L,"[11, 36]","freq bands 4-8,8-13,13-30, k=69"
+Bandpower + KNN,74.14%, 14/19,L,"[11, 36]","freq bands 4-8,8-13,13-30, k=70"
+Bandpower + KNN,74.39%, 14/19,L,"[11, 36]","freq bands 4-8,8-13,13-30, k=71"
+Bandpower + KNN,74.14%, 14/19,L,"[11, 36]","freq bands 4-8,8-13,13-30, k=72"
+Bandpower + KNN,74.55%, 14/19,L,"[11, 36]","freq bands 4-8,8-13,13-30, k=73"
+Bandpower + KNN,73.35%, 14/19,L,"[11, 36]","freq bands 4-8,8-13,13-30, k=74"
+Bandpower + KNN,74.08%, 14/19,L,"[11, 36]","freq bands 4-8,8-13,13-30, k=75"
+Bandpower + KNN,73.18%, 14/19,L,"[11, 36]","freq bands 4-8,8-13,13-30, k=76"
+Bandpower + KNN,74.02%, 14/19,L,"[11, 36]","freq bands 4-8,8-13,13-30, k=77"
+Bandpower + KNN,73.57%, 14/19,L,"[11, 36]","freq bands 4-8,8-13,13-30, k=78"
+Bandpower + KNN,73.92%, 14/19,L,"[11, 36]","freq bands 4-8,8-13,13-30, k=79"
+Bandpower + KNN,73.75%, 14/19,L,"[11, 36]","freq bands 4-8,8-13,13-30, k=80"
+Bandpower + KNN,73.48%, 14/19,L,"[11, 36]","freq bands 4-8,8-13,13-30, k=81"
+Bandpower + KNN,73.31%, 14/19,L,"[11, 36]","freq bands 4-8,8-13,13-30, k=82"
+Bandpower + KNN,73.31%, 14/19,L,"[11, 36]","freq bands 4-8,8-13,13-30, k=83"
+Bandpower + KNN,73.06%, 14/19,L,"[11, 36]","freq bands 4-8,8-13,13-30, k=84"
+Bandpower + KNN,72.94%, 14/19,L,"[11, 36]","freq bands 4-8,8-13,13-30, k=85"
+Bandpower + KNN,72.77%, 14/19,L,"[11, 36]","freq bands 4-8,8-13,13-30, k=86"
+Bandpower + KNN,72.85%, 14/19,L,"[11, 36]","freq bands 4-8,8-13,13-30, k=87"
+Bandpower + KNN,72.58%, 14/19,L,"[11, 36]","freq bands 4-8,8-13,13-30, k=88"
+Bandpower + KNN,72.56%, 14/19,L,"[11, 36]","freq bands 4-8,8-13,13-30, k=89"
+Bandpower + KNN,72.68%, 14/19,L,"[11, 36]","freq bands 4-8,8-13,13-30, k=90"
+Bandpower + KNN,72.58%, 14/19,L,"[11, 36]","freq bands 4-8,8-13,13-30, k=91"
+Bandpower + KNN,72.88%, 14/19,L,"[11, 36]","freq bands 4-8,8-13,13-30, k=92"
+Bandpower + KNN,72.90%, 14/19,L,"[11, 36]","freq bands 4-8,8-13,13-30, k=93"
+Bandpower + KNN,72.98%, 14/19,L,"[11, 36]","freq bands 4-8,8-13,13-30, k=94"
+Bandpower + KNN,72.70%, 14/19,L,"[11, 36]","freq bands 4-8,8-13,13-30, k=95"
+Bandpower + KNN,72.60%, 14/19,L,"[11, 36]","freq bands 4-8,8-13,13-30, k=96"
+Bandpower + KNN,72.80%, 13/19,L,"[11, 36]","freq bands 4-8,8-13,13-30, k=97"
+Bandpower + KNN,72.23%, 13/19,L,"[11, 36]","freq bands 4-8,8-13,13-30, k=98"
+Bandpower + KNN,72.51%, 13/19,L,"[11, 36]","freq bands 4-8,8-13,13-30, k=99"
+Bandpower + KNN,68.09%, 14/19,L,"[11, 36, 0]","freq bands 4-8,8-13,13-30, k=27"
+Bandpower + KNN,68.01%, 13/19,L,"[11, 36, 1]","freq bands 4-8,8-13,13-30, k=27"
+Bandpower + KNN,73.94%, 16/19,L,"[11, 36, 2]","freq bands 4-8,8-13,13-30, k=27"
+Bandpower + KNN,68.64%, 14/19,L,"[11, 36, 3]","freq bands 4-8,8-13,13-30, k=27"
+Bandpower + KNN,63.95%, 12/19,L,"[11, 36, 4]","freq bands 4-8,8-13,13-30, k=27"
+Bandpower + KNN,63.09%, 13/19,L,"[11, 36, 5]","freq bands 4-8,8-13,13-30, k=27"
+Bandpower + KNN,67.39%, 12/19,L,"[11, 36, 6]","freq bands 4-8,8-13,13-30, k=27"
+Bandpower + KNN,69.39%, 14/19,L,"[11, 36, 7]","freq bands 4-8,8-13,13-30, k=27"
+Bandpower + KNN,66.32%, 14/19,L,"[11, 36, 8]","freq bands 4-8,8-13,13-30, k=27"
+Bandpower + KNN,66.13%, 14/19,L,"[11, 36, 9]","freq bands 4-8,8-13,13-30, k=27"
+Bandpower + KNN,67.37%, 14/19,L,"[11, 36, 10]","freq bands 4-8,8-13,13-30, k=27"
+Bandpower + KNN,73.49%, 16/19,L,"[11, 36, 11]","freq bands 4-8,8-13,13-30, k=27"
+Bandpower + KNN,67.69%, 14/19,L,"[11, 36, 12]","freq bands 4-8,8-13,13-30, k=27"
+Bandpower + KNN,69.42%, 14/19,L,"[11, 36, 13]","freq bands 4-8,8-13,13-30, k=27"
+Bandpower + KNN,68.28%, 15/19,L,"[11, 36, 14]","freq bands 4-8,8-13,13-30, k=27"
+Bandpower + KNN,69.46%, 13/19,L,"[11, 36, 15]","freq bands 4-8,8-13,13-30, k=27"
+Bandpower + KNN,73.29%, 14/19,L,"[11, 36, 16]","freq bands 4-8,8-13,13-30, k=27"
+Bandpower + KNN,74.30%, 16/19,L,"[11, 36, 17]","freq bands 4-8,8-13,13-30, k=27"
+Bandpower + KNN,68.41%, 15/19,L,"[11, 36, 18]","freq bands 4-8,8-13,13-30, k=27"
+Bandpower + KNN,69.66%, 14/19,L,"[11, 36, 19]","freq bands 4-8,8-13,13-30, k=27"
+Bandpower + KNN,73.80%, 15/19,L,"[11, 36, 20]","freq bands 4-8,8-13,13-30, k=27"
+Bandpower + KNN,68.25%, 14/19,L,"[11, 36, 21]","freq bands 4-8,8-13,13-30, k=27"
+Bandpower + KNN,67.34%, 13/19,L,"[11, 36, 22]","freq bands 4-8,8-13,13-30, k=27"
+Bandpower + KNN,66.21%, 14/19,L,"[11, 36, 23]","freq bands 4-8,8-13,13-30, k=27"
+Bandpower + KNN,67.92%, 14/19,L,"[11, 36, 24]","freq bands 4-8,8-13,13-30, k=27"
+Bandpower + KNN,70.22%, 12/19,L,"[11, 36, 25]","freq bands 4-8,8-13,13-30, k=27"
+Bandpower + KNN,63.96%, 13/19,L,"[11, 36, 26]","freq bands 4-8,8-13,13-30, k=27"
+Bandpower + KNN,69.81%, 15/19,L,"[11, 36, 27]","freq bands 4-8,8-13,13-30, k=27"
+Bandpower + KNN,68.35%, 14/19,L,"[11, 36, 28]","freq bands 4-8,8-13,13-30, k=27"
+Bandpower + KNN,69.65%, 15/19,L,"[11, 36, 29]","freq bands 4-8,8-13,13-30, k=27"
+Bandpower + KNN,66.51%, 13/19,L,"[11, 36, 30]","freq bands 4-8,8-13,13-30, k=27"
+Bandpower + KNN,68.79%, 13/19,L,"[11, 36, 31]","freq bands 4-8,8-13,13-30, k=27"
+Bandpower + KNN,66.70%, 14/19,L,"[11, 36, 32]","freq bands 4-8,8-13,13-30, k=27"
+Bandpower + KNN,70.87%, 14/19,L,"[11, 36, 33]","freq bands 4-8,8-13,13-30, k=27"
+Bandpower + KNN,66.38%, 13/19,L,"[11, 36, 34]","freq bands 4-8,8-13,13-30, k=27"
+Bandpower + KNN,67.98%, 14/19,L,"[11, 36, 35]","freq bands 4-8,8-13,13-30, k=27"
+Bandpower + KNN,73.67%, 15/19,L,"[11, 36, 36]","freq bands 4-8,8-13,13-30, k=27"
+Bandpower + KNN,73.57%, 15/19,L,"[11, 36, 37]","freq bands 4-8,8-13,13-30, k=27"
+Bandpower + KNN,73.49%, 15/19,L,"[11, 36, 38]","freq bands 4-8,8-13,13-30, k=27"
+Bandpower + KNN,67.87%, 13/19,L,"[11, 36, 39]","freq bands 4-8,8-13,13-30, k=27"
+Bandpower + KNN,67.61%, 13/19,L,"[11, 36, 40]","freq bands 4-8,8-13,13-30, k=27"
+Bandpower + KNN,66.62%, 14/19,L,"[11, 36, 41]","freq bands 4-8,8-13,13-30, k=27"
+Bandpower + KNN,64.65%, 12/19,L,"[11, 36, 42]","freq bands 4-8,8-13,13-30, k=27"
+Bandpower + KNN,70.64%, 14/19,L,"[11, 36, 43]","freq bands 4-8,8-13,13-30, k=27"
+Bandpower + KNN,66.69%, 13/19,L,"[11, 36, 44]","freq bands 4-8,8-13,13-30, k=27"
+Bandpower + KNN,68.42%, 14/19,L,"[11, 36, 45]","freq bands 4-8,8-13,13-30, k=27"
+Bandpower + KNN,67.79%, 13/19,L,"[11, 36, 46]","freq bands 4-8,8-13,13-30, k=27"
+Bandpower + KNN,70.47%, 15/19,L,"[11, 36, 47]","freq bands 4-8,8-13,13-30, k=27"
+Bandpower + KNN,68.15%, 14/19,L,"[11, 36, 48]","freq bands 4-8,8-13,13-30, k=27"
+Bandpower + KNN,66.99%, 14/19,L,"[11, 36, 49]","freq bands 4-8,8-13,13-30, k=27"
+Bandpower + KNN,70.91%, 15/19,L,"[11, 36, 50]","freq bands 4-8,8-13,13-30, k=27"
+Bandpower + KNN,71.09%, 15/19,L,"[11, 36, 51]","freq bands 4-8,8-13,13-30, k=27"
+Bandpower + KNN,59.37%, 11/19,L,"[11, 36, 52]","freq bands 4-8,8-13,13-30, k=27"
+Bandpower + KNN,63.50%, 14/19,L,"[11, 36, 53]","freq bands 4-8,8-13,13-30, k=27"
+Bandpower + KNN,58.75%, 12/19,L,"[11, 36, 54]","freq bands 4-8,8-13,13-30, k=27"
+Bandpower + KNN,58.72%, 10/19,L,"[11, 36, 55]","freq bands 4-8,8-13,13-30, k=27"
+Bandpower + KNN,61.62%, 10/19,L,"[11, 36, 56]","freq bands 4-8,8-13,13-30, k=27"
+Bandpower + KNN,63.89%, 13/19,L,"[11, 36, 57]","freq bands 4-8,8-13,13-30, k=27"
+Bandpower + KNN,56.01%, 10/19,L,"[11, 36, 58]","freq bands 4-8,8-13,13-30, k=27"
+Bandpower + KNN,61.49%, 12/19,L,"[11, 36, 59]","freq bands 4-8,8-13,13-30, k=27"
+Bandpower + KNN,68.97%, 14/19,L,"[11, 36, 60]","freq bands 4-8,8-13,13-30, k=27"
+Bandpower + KNN,69.64%, 14/19,L,"[11, 36, 0]","freq bands 4-8,8-13,13-30, k=63"
+Bandpower + KNN,69.21%, 14/19,L,"[11, 36, 1]","freq bands 4-8,8-13,13-30, k=63"
+Bandpower + KNN,73.90%, 16/19,L,"[11, 36, 2]","freq bands 4-8,8-13,13-30, k=63"
+Bandpower + KNN,71.57%, 15/19,L,"[11, 36, 3]","freq bands 4-8,8-13,13-30, k=63"
+Bandpower + KNN,67.17%, 12/19,L,"[11, 36, 4]","freq bands 4-8,8-13,13-30, k=63"
+Bandpower + KNN,69.97%, 14/19,L,"[11, 36, 5]","freq bands 4-8,8-13,13-30, k=63"
+Bandpower + KNN,70.61%, 15/19,L,"[11, 36, 6]","freq bands 4-8,8-13,13-30, k=63"
+Bandpower + KNN,72.94%, 14/19,L,"[11, 36, 7]","freq bands 4-8,8-13,13-30, k=63"
+Bandpower + KNN,68.51%, 13/19,L,"[11, 36, 8]","freq bands 4-8,8-13,13-30, k=63"
+Bandpower + KNN,69.81%, 15/19,L,"[11, 36, 9]","freq bands 4-8,8-13,13-30, k=63"
+Bandpower + KNN,69.66%, 14/19,L,"[11, 36, 10]","freq bands 4-8,8-13,13-30, k=63"
+Bandpower + KNN,73.91%, 15/19,L,"[11, 36, 11]","freq bands 4-8,8-13,13-30, k=63"
+Bandpower + KNN,69.98%, 14/19,L,"[11, 36, 12]","freq bands 4-8,8-13,13-30, k=63"
+Bandpower + KNN,71.84%, 13/19,L,"[11, 36, 13]","freq bands 4-8,8-13,13-30, k=63"
+Bandpower + KNN,72.71%, 15/19,L,"[11, 36, 14]","freq bands 4-8,8-13,13-30, k=63"
+Bandpower + KNN,71.42%, 14/19,L,"[11, 36, 15]","freq bands 4-8,8-13,13-30, k=63"
+Bandpower + KNN,74.44%, 14/19,L,"[11, 36, 16]","freq bands 4-8,8-13,13-30, k=63"
+Bandpower + KNN,75.60%, 15/19,L,"[11, 36, 17]","freq bands 4-8,8-13,13-30, k=63"
+Bandpower + KNN,70.66%, 14/19,L,"[11, 36, 18]","freq bands 4-8,8-13,13-30, k=63"
+Bandpower + KNN,71.47%, 15/19,L,"[11, 36, 19]","freq bands 4-8,8-13,13-30, k=63"
+Bandpower + KNN,73.38%, 15/19,L,"[11, 36, 20]","freq bands 4-8,8-13,13-30, k=63"
+Bandpower + KNN,71.41%, 14/19,L,"[11, 36, 21]","freq bands 4-8,8-13,13-30, k=63"
+Bandpower + KNN,68.81%, 13/19,L,"[11, 36, 22]","freq bands 4-8,8-13,13-30, k=63"
+Bandpower + KNN,71.71%, 15/19,L,"[11, 36, 23]","freq bands 4-8,8-13,13-30, k=63"
+Bandpower + KNN,70.36%, 14/19,L,"[11, 36, 24]","freq bands 4-8,8-13,13-30, k=63"
+Bandpower + KNN,72.15%, 13/19,L,"[11, 36, 25]","freq bands 4-8,8-13,13-30, k=63"
+Bandpower + KNN,70.71%, 15/19,L,"[11, 36, 26]","freq bands 4-8,8-13,13-30, k=63"
+Bandpower + KNN,73.25%, 14/19,L,"[11, 36, 27]","freq bands 4-8,8-13,13-30, k=63"
+Bandpower + KNN,71.83%, 14/19,L,"[11, 36, 28]","freq bands 4-8,8-13,13-30, k=63"
+Bandpower + KNN,73.41%, 15/19,L,"[11, 36, 29]","freq bands 4-8,8-13,13-30, k=63"
+Bandpower + KNN,69.20%, 14/19,L,"[11, 36, 30]","freq bands 4-8,8-13,13-30, k=63"
+Bandpower + KNN,73.23%, 13/19,L,"[11, 36, 31]","freq bands 4-8,8-13,13-30, k=63"
+Bandpower + KNN,69.31%, 14/19,L,"[11, 36, 32]","freq bands 4-8,8-13,13-30, k=63"
+Bandpower + KNN,74.40%, 14/19,L,"[11, 36, 33]","freq bands 4-8,8-13,13-30, k=63"
+Bandpower + KNN,70.12%, 13/19,L,"[11, 36, 34]","freq bands 4-8,8-13,13-30, k=63"
+Bandpower + KNN,70.45%, 15/19,L,"[11, 36, 35]","freq bands 4-8,8-13,13-30, k=63"
+Bandpower + KNN,73.55%, 13/19,L,"[11, 36, 36]","freq bands 4-8,8-13,13-30, k=63"
+Bandpower + KNN,73.10%, 14/19,L,"[11, 36, 37]","freq bands 4-8,8-13,13-30, k=63"
+Bandpower + KNN,74.69%, 15/19,L,"[11, 36, 38]","freq bands 4-8,8-13,13-30, k=63"
+Bandpower + KNN,71.67%, 15/19,L,"[11, 36, 39]","freq bands 4-8,8-13,13-30, k=63"
+Bandpower + KNN,71.80%, 16/19,L,"[11, 36, 40]","freq bands 4-8,8-13,13-30, k=63"
+Bandpower + KNN,68.47%, 14/19,L,"[11, 36, 41]","freq bands 4-8,8-13,13-30, k=63"
+Bandpower + KNN,69.56%, 14/19,L,"[11, 36, 42]","freq bands 4-8,8-13,13-30, k=63"
+Bandpower + KNN,73.10%, 16/19,L,"[11, 36, 43]","freq bands 4-8,8-13,13-30, k=63"
+Bandpower + KNN,69.90%, 15/19,L,"[11, 36, 44]","freq bands 4-8,8-13,13-30, k=63"
+Bandpower + KNN,72.55%, 15/19,L,"[11, 36, 45]","freq bands 4-8,8-13,13-30, k=63"
+Bandpower + KNN,72.78%, 15/19,L,"[11, 36, 46]","freq bands 4-8,8-13,13-30, k=63"
+Bandpower + KNN,75.05%, 16/19,L,"[11, 36, 47]","freq bands 4-8,8-13,13-30, k=63"
+Bandpower + KNN,70.68%, 14/19,L,"[11, 36, 48]","freq bands 4-8,8-13,13-30, k=63"
+Bandpower + KNN,72.18%, 15/19,L,"[11, 36, 49]","freq bands 4-8,8-13,13-30, k=63"
+Bandpower + KNN,73.97%, 16/19,L,"[11, 36, 50]","freq bands 4-8,8-13,13-30, k=63"
+Bandpower + KNN,76.43%, 15/19,L,"[11, 36, 51]","freq bands 4-8,8-13,13-30, k=63"
+Bandpower + KNN,65.08%, 13/19,L,"[11, 36, 52]","freq bands 4-8,8-13,13-30, k=63"
+Bandpower + KNN,66.46%, 13/19,L,"[11, 36, 53]","freq bands 4-8,8-13,13-30, k=63"
+Bandpower + KNN,65.34%, 14/19,L,"[11, 36, 54]","freq bands 4-8,8-13,13-30, k=63"
+Bandpower + KNN,60.48%, 11/19,L,"[11, 36, 55]","freq bands 4-8,8-13,13-30, k=63"
+Bandpower + KNN,65.69%, 12/19,L,"[11, 36, 56]","freq bands 4-8,8-13,13-30, k=63"
+Bandpower + KNN,66.69%, 13/19,L,"[11, 36, 57]","freq bands 4-8,8-13,13-30, k=63"
+Bandpower + KNN,63.32%, 13/19,L,"[11, 36, 58]","freq bands 4-8,8-13,13-30, k=63"
+Bandpower + KNN,66.36%, 14/19,L,"[11, 36, 59]","freq bands 4-8,8-13,13-30, k=63"
+Bandpower + KNN,71.95%, 15/19,L,"[11, 36, 60]","freq bands 4-8,8-13,13-30, k=63"
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
