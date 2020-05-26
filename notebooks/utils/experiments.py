@@ -3,14 +3,14 @@ from sklearn.decomposition import PCA
 from sklearn import svm
 
 
-def test_setup(test_index, pp_count):
+def test_setup(test_index, n_pp):
     """
     Returns a pair consisting of boolean (True is test patient is PP) and test label
     Labels are 1 for pain, 0 for no pain
     Note that PP must be first in the data set, followed by PNP
     """
 
-    test_is_pp = test_index < pp_count
+    test_is_pp = test_index < n_pp
     test_label = 1 if test_is_pp else 0
     return test_is_pp, test_label
 
@@ -65,10 +65,12 @@ def classify_nusvm_with_xvalid(data_pp, data_pnp, nu, selected_channels, test_in
 
     data_bp = np.concatenate((data_pp, data_pnp))
 
-    test_is_pp, test_label = test_setup(test_index, pp_count)
+    test_is_pp, test_label = test_setup(test_index, len(data_pp))
     test_p, train_p = get_train_test(data_bp, test_index)
     train_p_separated = np.vstack(train_p)
     pp_train_len, pnp_train_len = get_pp_pnp_length(pp_count, pnp_count, len(test_p), test_is_pp)
+
+    print(pp_count, pnp_count, pp_train_len, pnp_train_len, test_index, test_label)
 
     if pca_components:
         train = pca(ravel_all_trials(train_p_separated, selected_channels) * mul, n_components=pca_components)
