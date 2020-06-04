@@ -1,6 +1,7 @@
 import numpy as np
 from sklearn.decomposition import PCA
 from sklearn import svm
+from .logger import log_result
 
 
 def test_setup(test_index, n_pp):
@@ -44,11 +45,12 @@ def pca(array, n_components):
     return pca.fit_transform(array)
 
 
-def classify_nusvm_with_xvalid(data_pp, data_pnp, nu, selected_channels, test_index, mul=1, pca_components=None, verbose=True):
+def classify_nusvm_with_valid(data_pp, data_pnp, nu, selected_channels, test_index, mul=1, pca_components=None,
+                              verbose=True):
     """
     Leaves out patient at test_index and trains a linear SVM classifier on all other patients
     Validates classifier on patient at test_index
-    Returns accuracy over all repetitions for the test patient
+    Returns accuracy over all repetitions for the test patient, predicted label, real label
     Input data must be array of EEG recordings with shape [n_repetitions, n_channels, n_features]
     :param data_pp: positive (e.g. pain) input data
     :param data_pnp: negative (e.g. no pain) input data
@@ -70,15 +72,12 @@ def classify_nusvm_with_xvalid(data_pp, data_pnp, nu, selected_channels, test_in
     train_p_separated = np.vstack(train_p)
     pp_train_len, pnp_train_len = get_pp_pnp_length(pp_count, pnp_count, len(test_p), test_is_pp)
 
-    print(pp_count, pnp_count, pp_train_len, pnp_train_len, test_index, test_label)
-
     if pca_components:
         train = pca(ravel_all_trials(train_p_separated, selected_channels) * mul, n_components=pca_components)
         test = pca(ravel_all_trials(test_p, selected_channels) * mul, n_components=pca_components)
     else:
         train = ravel_all_trials(train_p_separated, selected_channels) * mul
         test = ravel_all_trials(test_p, selected_channels) * mul
-
 
     labels = [1] * pp_train_len + [0] * pnp_train_len
     test_labels = [test_label] * len(test)
@@ -94,4 +93,30 @@ def classify_nusvm_with_xvalid(data_pp, data_pnp, nu, selected_channels, test_in
     if verbose:
         print('Train score:', train_acc, '  Test score:', test_acc)
 
-    return test_acc
+    return test_acc, np.round(np.mean(clas.predict(test))), test_label
+
+
+def classify_nusvm_cross_valid(data_pp, data_pnp, nu, selected_channels, mul=1, pca_components=None,
+                               verbose=True, logging=True):
+    total_score = 0
+    patients_correct = 0
+    total_size = len(data_pp) + len(data_pnp)
+    for i in range(total_size):
+        score, d, d = classify_nusvm_with_valid(data_pp, data_pnp, nu,
+                                                       selected_channels, i,
+                                                       pca_components=pca_components, verbose=verbose)
+        total_score += score
+        if score > 0.5:
+            patients_correct += 1
+
+    accuracy = total_score / total_size
+    print(total_score / total_size)
+
+    # TODO better logging
+    log_title = 'all_results/test_'
+    with open(log_title, 'a') as file:
+        log_result(file, log_title, accuracy, patients_correct, total_size, "TODO SET NAME", selected_channels, "TODO NOTES")
+
+    if verbose:
+        print('Correctly labeled', patients_correct, 'out of', total_size)
+
