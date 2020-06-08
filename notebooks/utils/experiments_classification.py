@@ -3,8 +3,8 @@ from sklearn import svm
 from sklearn.metrics import confusion_matrix
 
 # TODO look into imports, should work in both notebooks and test
-from logger import log_result
-from experiments_setup import test_setup, get_train_test, get_pp_pnp_length, pca, ravel_all_trials
+from .logger import log_result
+from .experiments_setup import test_setup, get_train_test, get_pp_pnp_length, pca, ravel_all_trials
 
 
 def get_tp_tn_fp_fn(true_labels, pred_labels):
