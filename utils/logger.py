@@ -1,5 +1,6 @@
 import csv
 
+
 def log_result(file, name, accuracy, patients_correct, patients_total, set_name, channels, notes):
     """
     Log the result of an experiment in a csv file with the following information:

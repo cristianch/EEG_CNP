@@ -5,6 +5,7 @@ from sklearn.metrics import confusion_matrix
 # TODO look into imports, should work in both notebooks and test
 from .logger import log_result
 from .experiments_setup import test_setup, get_train_test, get_pp_pnp_length, pca, ravel_all_trials
+from .database import new_log_database, log_to_database
 
 
 def get_tp_tn_fp_fn(true_labels, pred_labels):
@@ -12,8 +13,8 @@ def get_tp_tn_fp_fn(true_labels, pred_labels):
     return c[1, 1], c[0, 0], c[0, 1], c[1, 0]
 
 
-def classify_nusvm_with_valid(data_pp, data_pnp, nu, selected_channels, test_index, pca_components=None,
-                              verbose=True):
+def classify_linear_nusvm_with_valid(data_pp, data_pnp, nu, selected_channels, test_index, pca_components=None,
+                                     verbose=True):
     """
     Leaves out patient at test_index and trains a linear SVM classifier on all other patients
     Validates classifier on patient at test_index
@@ -64,7 +65,8 @@ def classify_nusvm_with_valid(data_pp, data_pnp, nu, selected_channels, test_ind
 
 
 def classify_nusvm_cross_valid(data_pp, data_pnp, nu, selected_channels, pca_components=None,
-                               verbose=True, logging=True):
+                               verbose=True, log_db_name=None, log_txt_name=None, log_proc_method=None,
+                               log_dataset=None, log_notes=None):
     """
     :param data_pp:
     :param data_pnp:
@@ -72,16 +74,17 @@ def classify_nusvm_cross_valid(data_pp, data_pnp, nu, selected_channels, pca_com
     :param selected_channels:
     :param pca_components:
     :param verbose:
-    :param logging:
+    :param log_db_name: if set, will be used to indicate name of database log file
+    :param log_txt_name: if set, will be used to indicate name of text log file
     :returns overall accuracy, sensitivity, specificity, average accuracy
     """
     total_score, total_tp, total_tn, total_fp, total_fn = 0, 0, 0, 0, 0
     patients_correct = 0
     n_patients = len(data_pp) + len(data_pnp)
     for i in range(n_patients):
-        score, tp, tn, fp, fn = classify_nusvm_with_valid(data_pp, data_pnp, nu,
-                                                       selected_channels, i,
-                                                       pca_components=pca_components, verbose=verbose)
+        score, tp, tn, fp, fn = classify_linear_nusvm_with_valid(data_pp, data_pnp, nu,
+                                                                 selected_channels, i,
+                                                                 pca_components=pca_components, verbose=verbose)
         total_score += score
         total_tp += tp
         total_tn += tn
@@ -95,15 +98,19 @@ def classify_nusvm_cross_valid(data_pp, data_pnp, nu, selected_channels, pca_com
     accuracy = (total_tp + total_tn) / (total_tp + total_tn + total_fp + total_fn)
     sensitivity = total_tp / (total_tp + total_fn)
     specificity = total_tn / (total_tn + total_fp)
+    patients_correct_ratio = patients_correct / n_patients
 
-    # TODO better logging
-    log_title = 'all_results/test_'
-    with open(log_title, 'a') as file:
-        log_result(file, log_title, accuracy, patients_correct, n_patients, "TODO SET NAME", selected_channels, "TODO NOTES")
+    #TODO detailed logs
+    if log_db_name:
+        log_to_database(log_db_name, log_proc_method, 'Linear SVM', log_dataset, accuracy, sensitivity, specificity,
+                        avg_accuracy, float(patients_correct_ratio), str(selected_channels), nu, log_notes)
+
+    # TODO
+    # if log_txt_name:
+    #    with open(log_title, 'a') as file:
+    #       log_result(file, log_title, accuracy, patients_correct, n_patients, "TODO SET NAME", selected_channels, "TODO NOTES")
 
     if verbose:
-
         print('Correctly labeled', patients_correct, 'out of', n_patients, 'accuracy', accuracy)
 
     return accuracy, sensitivity, specificity, avg_accuracy
-
