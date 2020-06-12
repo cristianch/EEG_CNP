@@ -1,6 +1,7 @@
 import numpy as np
 from sklearn import svm
 from sklearn.metrics import confusion_matrix
+import json
 
 # TODO look into imports, should work in both notebooks and test
 from .logger import log_result
@@ -65,8 +66,8 @@ def classify_linear_nusvm_with_valid(data_pp, data_pnp, nu, selected_channels, t
 
 
 def classify_nusvm_cross_valid(data_pp, data_pnp, nu, selected_channels, pca_components=None,
-                               verbose=True, log_db_name=None, log_txt_name=None, log_proc_method=None,
-                               log_dataset=None, log_notes=None):
+                               verbose=True, log_db_name=None, log_txt = True, log_proc_method=None,
+                               log_dataset=None, log_notes=None, log_location='./results/'):
     """
     :param data_pp:
     :param data_pnp:
@@ -75,7 +76,11 @@ def classify_nusvm_cross_valid(data_pp, data_pnp, nu, selected_channels, pca_com
     :param pca_components:
     :param verbose:
     :param log_db_name: if set, will be used to indicate name of database log file
-    :param log_txt_name: if set, will be used to indicate name of text log file
+    :param log_txt: if true, results will be logged to text file as csv
+    :param log_proc_method: processing method name for logging
+    :param log_dataset: dataset name for logging
+    :param log_notes: should be passed as a dictionary; will be recorded as a json string
+    :param log_location: location of log file and database
     :returns overall accuracy, sensitivity, specificity, average accuracy
     """
     total_score, total_tp, total_tn, total_fp, total_fn = 0, 0, 0, 0, 0
@@ -100,15 +105,21 @@ def classify_nusvm_cross_valid(data_pp, data_pnp, nu, selected_channels, pca_com
     specificity = total_tn / (total_tn + total_fp)
     patients_correct_ratio = patients_correct / n_patients
 
+    classifier = 'Linear SVM'
+    notes = json.dumps(log_notes) if log_notes else ''
+
     #TODO detailed logs
     if log_db_name:
-        log_to_database(log_db_name, log_proc_method, 'Linear SVM', log_dataset, accuracy, sensitivity, specificity,
-                        avg_accuracy, float(patients_correct_ratio), str(selected_channels), nu, log_notes)
+        log_to_database(log_location + log_db_name, log_proc_method, classifier, log_dataset, accuracy, sensitivity, specificity,
+                        avg_accuracy, float(patients_correct_ratio), str(selected_channels), nu, notes)
 
-    # TODO
-    # if log_txt_name:
-    #    with open(log_title, 'a') as file:
-    #       log_result(file, log_title, accuracy, patients_correct, n_patients, "TODO SET NAME", selected_channels, "TODO NOTES")
+
+    #TODO look into errors that prevent proper file closing
+    if log_txt:
+        log_title = (log_proc_method + '_' + classifier).replace(' ', '_') + '.csv'
+        with open(log_location + log_title, 'a', newline='') as file:
+            log_result(file, log_proc_method, classifier, log_dataset, accuracy, sensitivity, specificity,
+                        avg_accuracy, float(patients_correct_ratio), str(selected_channels), nu, notes)
 
     if verbose:
         print('Correctly labeled', patients_correct, 'out of', n_patients, 'accuracy', accuracy)

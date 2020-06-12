@@ -2,6 +2,7 @@ import sqlite3
 import os
 
 
+
 def new_log_database(name):
     """
     Create a new database for logging
@@ -26,6 +27,3 @@ def log_to_database(db, processing_method, classifier, dataset, accuracy, sensit
     conn.commit()
     conn.close()
 
-
-#os.chdir('..')
-#new_log_database('log.db')

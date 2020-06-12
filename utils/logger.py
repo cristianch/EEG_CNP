@@ -1,13 +1,25 @@
 import csv
 
 
-def log_result(file, name, accuracy, patients_correct, patients_total, set_name, channels, notes):
+def log_result(file, processing_method, classifier, dataset, accuracy, sensitivity, specificity, avg_accuracy,
+               patients_correct, channels, hyperparameters, notes, details=None):
     """
-    Log the result of an experiment in a csv file with the following information:
-        experiment name, accuracy (over all repetitions), number of correct patients/total number of patients, 
-        dataset name, selected channels, notes
+    :param file:
+    :param processing_method:
+    :param classifier:
+    :param dataset:
+    :param accuracy:
+    :param sensitivity:
+    :param specificity:
+    :param avg_accuracy:
+    :param patients_correct:
+    :param channels:
+    :param hyperparameters:
+    :param notes:
+    :param details:
+    :return:
     """
     writer = csv.writer(file)
     writer.writerow(
-        [name, str(accuracy * 100) + '%', ' ' + str(patients_correct) + '/' + str(patients_total), set_name, channels,
-         notes])
+        [processing_method, classifier, dataset, accuracy, sensitivity, specificity, avg_accuracy, patients_correct,
+         channels, hyperparameters, notes, details])
