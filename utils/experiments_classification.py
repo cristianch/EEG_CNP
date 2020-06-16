@@ -8,6 +8,9 @@ from .logger import log_result
 from .experiments_setup import test_setup, get_train_test, get_pp_pnp_length, pca, ravel_all_trials
 from .database import new_log_database, log_to_database
 
+CSV_EXTENSION = '.csv'
+DETAILED_LOG_SUFFIX = '_detailed'
+
 
 def get_tp_tn_fp_fn(true_labels, pred_labels):
     c = confusion_matrix(true_labels, pred_labels, [0, 1])
@@ -15,7 +18,7 @@ def get_tp_tn_fp_fn(true_labels, pred_labels):
 
 
 def classify_linear_nusvm_with_valid(data_pp, data_pnp, nu, selected_channels, test_index, pca_components=None,
-                                     verbose=True):
+                                     verbose=True, probability=False):
     """
     Leaves out patient at test_index and trains a linear SVM classifier on all other patients
     Validates classifier on patient at test_index
@@ -28,6 +31,7 @@ def classify_linear_nusvm_with_valid(data_pp, data_pnp, nu, selected_channels, t
     :param test_index: data of patient at this index position will be used as validation sample
     :param pca_components: defaults to None (don't apply PCA); set to an integer to apply PCA with the given number of components
     :param verbose: if true, print out train and test accuracy
+    :param probability: use probabilities in classifier
     """
 
     pp_count = np.vstack(data_pp).shape[0]
@@ -53,21 +57,22 @@ def classify_linear_nusvm_with_valid(data_pp, data_pnp, nu, selected_channels, t
     if verbose:
         print('Test index', test_index, 'Preparing to classify set of', pp_train_len, 'PP and', pnp_train_len, 'PNP.')
 
-    clas = svm.NuSVC(nu=nu, kernel='linear')
+    clas = svm.NuSVC(nu=nu, kernel='linear', probability=probability)
     clas.fit(train, labels)
     train_acc = clas.score(train, labels)
     test_acc = clas.score(test, test_labels)
     tp, tn, fp, fn = get_tp_tn_fp_fn(test_labels, clas.predict(test))
+    pred_labels = np.around(clas.predict_proba(test), 3)
 
     if verbose:
         print('Train score:', train_acc, '  Test score:', test_acc)
 
-    return test_acc, tp, tn, fp, fn
+    return test_acc, tp, tn, fp, fn, test_label, pred_labels
 
 
 def classify_nusvm_cross_valid(data_pp, data_pnp, nu, selected_channels, pca_components=None,
-                               verbose=True, log_db_name=None, log_txt = True, log_proc_method=None,
-                               log_dataset=None, log_notes=None, log_location='./results/'):
+                               verbose=True, log_db_name=None, log_txt=True, log_proc_method=None,
+                               log_dataset=None, log_notes=None, log_location='./results/', log_details=False):
     """
     :param data_pp:
     :param data_pnp:
@@ -81,15 +86,20 @@ def classify_nusvm_cross_valid(data_pp, data_pnp, nu, selected_channels, pca_com
     :param log_dataset: dataset name for logging
     :param log_notes: should be passed as a dictionary; will be recorded as a json string
     :param log_location: location of log file and database
+    :param log_details: if true, predict probabilities and true labels for each partition are logged
     :returns overall accuracy, sensitivity, specificity, average accuracy
     """
     total_score, total_tp, total_tn, total_fp, total_fn = 0, 0, 0, 0, 0
     patients_correct = 0
     n_patients = len(data_pp) + len(data_pnp)
+    details = []
+    probability = log_details
+
     for i in range(n_patients):
-        score, tp, tn, fp, fn = classify_linear_nusvm_with_valid(data_pp, data_pnp, nu,
-                                                                 selected_channels, i,
-                                                                 pca_components=pca_components, verbose=verbose)
+        score, tp, tn, fp, fn, tl, pl = classify_linear_nusvm_with_valid(data_pp, data_pnp, nu,
+                                                                         selected_channels, i,
+                                                                         pca_components=pca_components, verbose=verbose,
+                                                                         probability=probability)
         total_score += score
         total_tp += tp
         total_tn += tn
@@ -99,6 +109,9 @@ def classify_nusvm_cross_valid(data_pp, data_pnp, nu, selected_channels, pca_com
         if score > 0.5:
             patients_correct += 1
 
+        if log_details:
+            details.append({'true label': tl, 'predicted probabilities': pl.tolist()})
+
     avg_accuracy = total_score / n_patients
     accuracy = (total_tp + total_tn) / (total_tp + total_tn + total_fp + total_fn)
     sensitivity = total_tp / (total_tp + total_fn)
@@ -106,20 +119,28 @@ def classify_nusvm_cross_valid(data_pp, data_pnp, nu, selected_channels, pca_com
     patients_correct_ratio = patients_correct / n_patients
 
     classifier = 'Linear SVM'
-    notes = json.dumps(log_notes) if log_notes else ''
+    notes_json = json.dumps(log_notes) if log_notes else ''
 
-    #TODO detailed logs
+    details_json = json.dumps(details) if log_details else ''
+
+    # TODO detailed logs
     if log_db_name:
-        log_to_database(log_location + log_db_name, log_proc_method, classifier, log_dataset, accuracy, sensitivity, specificity,
-                        avg_accuracy, float(patients_correct_ratio), str(selected_channels), nu, notes)
+        log_to_database(log_location + log_db_name, log_proc_method, classifier, log_dataset, accuracy, sensitivity,
+                        specificity,
+                        avg_accuracy, float(patients_correct_ratio), str(selected_channels), nu, notes_json,
+                        details_json)
 
-
-    #TODO look into errors that prevent proper file closing
+    # TODO look into errors that prevent proper file closing
     if log_txt:
-        log_title = (log_proc_method + '_' + classifier).replace(' ', '_') + '.csv'
+        log_title = (log_proc_method + '_' + classifier).replace(' ', '_')
+        if log_details:
+            log_title += DETAILED_LOG_SUFFIX
+        log_title += CSV_EXTENSION
+        
         with open(log_location + log_title, 'a', newline='') as file:
             log_result(file, log_proc_method, classifier, log_dataset, accuracy, sensitivity, specificity,
-                        avg_accuracy, float(patients_correct_ratio), str(selected_channels), nu, notes)
+                       avg_accuracy, float(patients_correct_ratio), str(selected_channels), nu, notes_json,
+                       details_json)
 
     if verbose:
         print('Correctly labeled', patients_correct, 'out of', n_patients, 'accuracy', accuracy)
