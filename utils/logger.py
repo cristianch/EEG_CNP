@@ -4,7 +4,8 @@ import csv
 def log_result(file, processing_method, classifier, dataset, accuracy, sensitivity, specificity, avg_accuracy,
                patients_correct, channels, hyperparameters, notes, details=None):
     """
-    :param file:
+    Log fields to a csv file.
+    :param file: Reference to an opened file, ready for writing
     :param processing_method:
     :param classifier:
     :param dataset:

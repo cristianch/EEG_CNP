@@ -13,6 +13,12 @@ DETAILED_LOG_SUFFIX = '_detailed'
 
 
 def get_tp_tn_fp_fn(true_labels, pred_labels):
+    """
+    Calculate true positives, true negatives, false positives, false negatives based on true labels, predicted labels
+    :param true_labels: array
+    :param pred_labels: array
+    :return: true positives, true negatives, false positives, false negatives
+    """
     c = confusion_matrix(true_labels, pred_labels, [0, 1])
     return c[1, 1], c[0, 0], c[0, 1], c[1, 0]
 
@@ -22,8 +28,8 @@ def classify_linear_nusvm_with_valid(data_pp, data_pnp, nu, selected_channels, t
     """
     Leaves out patient at test_index and trains a linear SVM classifier on all other patients
     Validates classifier on patient at test_index
-    :returns accuracy, true positives, true negatives, false positives, false negatives
     Input data must be array of EEG recordings with shape [n_repetitions, n_channels, n_features]
+    :returns accuracy, true positives, true negatives, false positives, false negatives
     :param data_pp: positive (e.g. pain) input data
     :param data_pnp: negative (e.g. no pain) input data
     :param nu: SVM hyper-parameter
@@ -74,6 +80,8 @@ def classify_nusvm_cross_valid(data_pp, data_pnp, nu, selected_channels, pca_com
                                verbose=True, log_db_name=None, log_txt=True, log_proc_method=None,
                                log_dataset=None, log_notes=None, log_location='./results/', log_details=False):
     """
+    Cross-validates over entire set; each validation fold will consist of the recordings from 1 patient.
+    Input data must be array of EEG recordings with shape [n_repetitions, n_channels, n_features]
     :param data_pp:
     :param data_pnp:
     :param nu:
@@ -87,8 +95,10 @@ def classify_nusvm_cross_valid(data_pp, data_pnp, nu, selected_channels, pca_com
     :param log_notes: should be passed as a dictionary; will be recorded as a json string
     :param log_location: location of log file and database
     :param log_details: if true, predict probabilities and true labels for each partition are logged
-    :returns overall accuracy, sensitivity, specificity, average accuracy
+    :returns overall accuracy, sensitivity, specificity, average accuracy (mean of accuracy in feach fold),
+        true label, predicted labels (per-label probabilities if log_details is True, else just the label)
     """
+
     total_score, total_tp, total_tn, total_fp, total_fn = 0, 0, 0, 0, 0
     patients_correct = 0
     n_patients = len(data_pp) + len(data_pnp)
@@ -123,7 +133,6 @@ def classify_nusvm_cross_valid(data_pp, data_pnp, nu, selected_channels, pca_com
 
     details_json = json.dumps(details) if log_details else ''
 
-    # TODO detailed logs
     if log_db_name:
         log_to_database(log_location + log_db_name, log_proc_method, classifier, log_dataset, accuracy, sensitivity,
                         specificity,
@@ -131,12 +140,13 @@ def classify_nusvm_cross_valid(data_pp, data_pnp, nu, selected_channels, pca_com
                         details_json)
 
     # TODO look into errors that prevent proper file closing
+    # TODO add header when csv file first created
     if log_txt:
         log_title = (log_proc_method + '_' + classifier).replace(' ', '_')
         if log_details:
             log_title += DETAILED_LOG_SUFFIX
         log_title += CSV_EXTENSION
-        
+
         with open(log_location + log_title, 'a', newline='') as file:
             log_result(file, log_proc_method, classifier, log_dataset, accuracy, sensitivity, specificity,
                        avg_accuracy, float(patients_correct_ratio), str(selected_channels), nu, notes_json,
