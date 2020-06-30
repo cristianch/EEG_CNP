@@ -2,9 +2,10 @@ import numpy as np
 from sklearn import svm
 from sklearn.metrics import confusion_matrix
 import json
+import os
 
 # TODO look into imports, should work in both notebooks and test
-from .logger import log_result
+from .logger import log_result, log_column_titles
 from .experiments_setup import test_setup, get_train_test, get_pp_pnp_length, pca, ravel_all_trials
 from .database import new_log_database, log_to_database
 
@@ -68,7 +69,8 @@ def classify_linear_nusvm_with_valid(data_pp, data_pnp, nu, selected_channels, t
     train_acc = clas.score(train, labels)
     test_acc = clas.score(test, test_labels)
     tp, tn, fp, fn = get_tp_tn_fp_fn(test_labels, clas.predict(test))
-    pred_labels = np.around(clas.predict_proba(test), 3)
+
+    pred_labels = np.around(clas.predict_proba(test), 3) if probability else clas.predict(test)
 
     if verbose:
         print('Train score:', train_acc, '  Test score:', test_acc)
@@ -86,7 +88,7 @@ def classify_nusvm_cross_valid(data_pp, data_pnp, nu, selected_channels, pca_com
     :param data_pnp:
     :param nu:
     :param selected_channels:
-    :param pca_components:
+    :param pca_components: defaults to None (don't apply PCA); set to an integer to apply PCA with the given number of components
     :param verbose:
     :param log_db_name: if set, will be used to indicate name of database log file
     :param log_txt: if true, results will be logged to text file as csv
@@ -140,14 +142,18 @@ def classify_nusvm_cross_valid(data_pp, data_pnp, nu, selected_channels, pca_com
                         details_json)
 
     # TODO look into errors that prevent proper file closing
-    # TODO add header when csv file first created
     if log_txt:
         log_title = (log_proc_method + '_' + classifier).replace(' ', '_')
         if log_details:
             log_title += DETAILED_LOG_SUFFIX
         log_title += CSV_EXTENSION
+        log_file_name = log_location + log_title
+
+        log_file_exists = os.path.exists(log_file_name)
 
         with open(log_location + log_title, 'a', newline='') as file:
+            if not log_file_exists:
+                log_column_titles(file)
             log_result(file, log_proc_method, classifier, log_dataset, accuracy, sensitivity, specificity,
                        avg_accuracy, float(patients_correct_ratio), str(selected_channels), nu, notes_json,
                        details_json)

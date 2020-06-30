@@ -24,3 +24,14 @@ def log_result(file, processing_method, classifier, dataset, accuracy, sensitivi
     writer.writerow(
         [processing_method, classifier, dataset, accuracy, sensitivity, specificity, avg_accuracy, patients_correct,
          channels, hyperparameters, notes, details])
+
+
+def log_column_titles(file, processing_method='Processing Method', classifier='Classifier', dataset='Dataset',
+                      accuracy='Overall accuracy', sensitivity='Sensitivity', specificity='Specificity',
+                      avg_accuracy='Average accuracy per fold',
+                      patients_correct='Patients correct ratio', channels='Channels', hyperparameters='Hyperparameters',
+                      notes='Notes', details='Details'):
+    writer = csv.writer(file)
+    writer.writerow(
+        [processing_method, classifier, dataset, accuracy, sensitivity, specificity, avg_accuracy, patients_correct,
+         channels, hyperparameters, notes, details])
