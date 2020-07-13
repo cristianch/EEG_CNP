@@ -141,7 +141,6 @@ def classify_nusvm_cross_valid(data_pp, data_pnp, nu, selected_channels, pca_com
                         avg_accuracy, float(patients_correct_ratio), str(selected_channels), nu, notes_json,
                         details_json)
 
-    # TODO look into errors that prevent proper file closing
     if log_txt:
         log_title = (log_proc_method + '_' + classifier).replace(' ', '_')
         if log_details:
@@ -162,3 +161,59 @@ def classify_nusvm_cross_valid(data_pp, data_pnp, nu, selected_channels, pca_com
         print('Correctly labeled', patients_correct, 'out of', n_patients, 'accuracy', accuracy)
 
     return accuracy, sensitivity, specificity, avg_accuracy
+
+
+def classify_nusvm_param_seach(data_pp, data_pnp, nu_lowest, nu_highest, nu_step_size, pca_components=None,
+                               verbose=False, log_db_name=None, log_txt=True, log_proc_method=None,
+                               log_dataset=None, log_notes=None, log_location='./results/', log_details=False):
+
+    max_acc_overall = {'channels': [], 'value': 0, 'nu': 0}
+
+    for param_nu in np.arange(nu_lowest, nu_highest, nu_step_size):
+        print('nu:', param_nu)
+        previous_channels = []
+        prev_max_acc = 0
+
+        #TODO don't hardcode channel no, extract it from data
+        #TODO use channel names instead of numbers
+        n_channels = 61
+
+        max_acc = {'index': 0, 'value': 0}
+        while max_acc['value'] >= prev_max_acc:
+            max_acc = {'index': 0, 'value': 0}
+            for channel in range(n_channels):
+                if channel in previous_channels:
+                    continue
+
+                selected_channels = previous_channels + [channel]
+
+                accuracy, sensitivity, specificity, avg_accuracy = classify_nusvm_cross_valid(data_pp, data_pnp,
+                                                                                              param_nu,
+                                                                                              selected_channels,
+                                                                                              pca_components=pca_components,
+                                                                                              verbose=verbose,
+                                                                                              log_db_name=log_db_name,
+                                                                                              log_txt=log_txt,
+                                                                                              log_proc_method=log_proc_method,
+                                                                                              log_dataset=log_dataset,
+                                                                                              log_notes=log_notes,
+                                                                                              log_location=log_location)
+
+                if accuracy > max_acc['value']:
+                    max_acc['index'] = channel
+                    max_acc['value'] = accuracy
+                    max_acc['nu'] = param_nu
+
+            if max_acc['value'] >= prev_max_acc:
+                prev_max_acc = max_acc['value']
+                previous_channels = previous_channels + [max_acc['index']]
+            print(previous_channels, '{:.2f}'.format(prev_max_acc))
+
+        if prev_max_acc > max_acc_overall['value']:
+            max_acc_overall['channels'] = list(previous_channels)
+            max_acc_overall['value'] = prev_max_acc
+            max_acc_overall['nu'] = param_nu
+        print('Mac Accuracy:', max_acc_overall)
+
+    print('Final Max Accuracy:', max_acc_overall)
+    return max_acc_overall
