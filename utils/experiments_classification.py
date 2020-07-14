@@ -78,7 +78,7 @@ def classify_linear_nusvm_with_valid(data_pp, data_pnp, nu, selected_channels, t
     return test_acc, tp, tn, fp, fn, test_label, pred_labels
 
 
-def classify_nusvm_cross_valid(data_pp, data_pnp, nu, selected_channels, pca_components=None,
+def classify_nusvm_cross_valid(data_pp, data_pnp, nu, selected_channels, channel_names, pca_components=None,
                                verbose=True, log_db_name=None, log_txt=True, log_proc_method=None,
                                log_dataset=None, log_notes=None, log_location='./results/', log_details=False):
     """
@@ -88,6 +88,7 @@ def classify_nusvm_cross_valid(data_pp, data_pnp, nu, selected_channels, pca_com
     :param data_pnp:
     :param nu:
     :param selected_channels:
+    :param channel_names:
     :param pca_components: defaults to None (don't apply PCA); set to an integer to apply PCA with the given number of components
     :param verbose:
     :param log_db_name: if set, will be used to indicate name of database log file
@@ -135,10 +136,12 @@ def classify_nusvm_cross_valid(data_pp, data_pnp, nu, selected_channels, pca_com
 
     details_json = json.dumps(details) if log_details else ''
 
+    selected_channel_names = (np.array(channel_names)[selected_channels]).tolist()
+
     if log_db_name:
         log_to_database(log_location + log_db_name, log_proc_method, classifier, log_dataset, accuracy, sensitivity,
                         specificity,
-                        avg_accuracy, float(patients_correct_ratio), str(selected_channels), nu, notes_json,
+                        avg_accuracy, float(patients_correct_ratio), str(selected_channel_names), nu, notes_json,
                         details_json)
 
     if log_txt:
@@ -154,7 +157,7 @@ def classify_nusvm_cross_valid(data_pp, data_pnp, nu, selected_channels, pca_com
             if not log_file_exists:
                 log_column_titles(file)
             log_result(file, log_proc_method, classifier, log_dataset, accuracy, sensitivity, specificity,
-                       avg_accuracy, float(patients_correct_ratio), str(selected_channels), nu, notes_json,
+                       avg_accuracy, float(patients_correct_ratio), str(selected_channel_names), nu, notes_json,
                        details_json)
 
     if verbose:
