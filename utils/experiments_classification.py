@@ -166,10 +166,10 @@ def classify_nusvm_cross_valid(data_pp, data_pnp, nu, selected_channels, channel
     return accuracy, sensitivity, specificity, avg_accuracy
 
 
-def classify_nusvm_param_seach(data_pp, data_pnp, nu_lowest, nu_highest, nu_step_size, pca_components=None,
+def classify_nusvm_param_seach(data_pp, data_pnp, nu_lowest, nu_highest, nu_step_size, channel_names,
+                               pca_components=None,
                                verbose=False, log_db_name=None, log_txt=True, log_proc_method=None,
                                log_dataset=None, log_notes=None, log_location='./results/', log_details=False):
-
     max_acc_overall = {'channels': [], 'value': 0, 'nu': 0}
 
     for param_nu in np.arange(nu_lowest, nu_highest, nu_step_size):
@@ -177,8 +177,8 @@ def classify_nusvm_param_seach(data_pp, data_pnp, nu_lowest, nu_highest, nu_step
         previous_channels = []
         prev_max_acc = 0
 
-        #TODO don't hardcode channel no, extract it from data
-        #TODO use channel names instead of numbers
+        # TODO don't hardcode channel no, extract it from data
+        # TODO use channel names instead of numbers
         n_channels = 61
 
         max_acc = {'index': 0, 'value': 0}
@@ -193,6 +193,7 @@ def classify_nusvm_param_seach(data_pp, data_pnp, nu_lowest, nu_highest, nu_step
                 accuracy, sensitivity, specificity, avg_accuracy = classify_nusvm_cross_valid(data_pp, data_pnp,
                                                                                               param_nu,
                                                                                               selected_channels,
+                                                                                              channel_names,
                                                                                               pca_components=pca_components,
                                                                                               verbose=verbose,
                                                                                               log_db_name=log_db_name,
