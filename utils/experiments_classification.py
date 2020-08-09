@@ -14,6 +14,7 @@ DETAILED_LOG_SUFFIX = '_detailed'
 
 LOG_NOTES_PCA_COMPONENTS = 'pca_components'
 
+
 def get_tp_tn_fp_fn(true_labels, pred_labels):
     """
     Calculate true positives, true negatives, false positives, false negatives based on true labels, predicted labels
@@ -109,7 +110,6 @@ def classify_nusvm_cross_valid(data_pp, data_pnp, nu, selected_channels, channel
     details = []
     probability = log_details
 
-
     for i in range(n_patients):
         score, tp, tn, fp, fn, tl, pl = classify_linear_nusvm_with_valid(data_pp, data_pnp, nu,
                                                                          selected_channels, i,
@@ -147,7 +147,8 @@ def classify_nusvm_cross_valid(data_pp, data_pnp, nu, selected_channels, channel
                         details_json)
 
     if log_txt:
-        log_title = (log_proc_method + '_' + classifier).replace(' ', '_')
+        log_title = (log_proc_method + '_' + classifier + '_' + log_dataset).replace(' ', '_').replace('-', '_') \
+            .replace('/', '_')
         if log_details:
             log_title += DETAILED_LOG_SUFFIX
         log_title += CSV_EXTENSION
@@ -225,15 +226,15 @@ def classify_nusvm_param_seach(data_pp, data_pnp, nu_lowest, nu_highest, nu_step
             max_acc_overall['value'] = prev_max_acc
             max_acc_overall['nu'] = param_nu
 
-        print('Mac Accuracy:', max_acc_overall)
+        print('Max Accuracy:', max_acc_overall)
 
     print('Final Max Accuracy:', max_acc_overall)
     return max_acc_overall
 
 
 def classify_nusvm_param_pca_seach(data_pp, data_pnp, nu_lowest, nu_highest, nu_step_size, channel_names,
-                               verbose=False, log_db_name=None, log_txt=True, log_proc_method=None,
-                               log_dataset=None, log_notes=None, log_location='./results/', log_details=False):
+                                   verbose=False, log_db_name=None, log_txt=True, log_proc_method=None,
+                                   log_dataset=None, log_notes=None, log_location='./results/', log_details=False):
     max_acc_overall = {'channels': [], 'value': 0, 'nu': 0, 'components': 0}
 
     features_per_channel = data_pp[0].shape[2]
@@ -292,9 +293,9 @@ def classify_nusvm_param_pca_seach(data_pp, data_pnp, nu_lowest, nu_highest, nu_
                 prev_components = max_acc['components']
             print(previous_channels, '{:.2f}'.format(prev_max_acc))
 
-
             print('*******************************')
-            print('Channels:', previous_channels, 'Components:', prev_components, 'Max acc:', '{:.2f}'.format(prev_max_acc))
+            print('Channels:', previous_channels, 'Components:', prev_components, 'Max acc:',
+                  '{:.2f}'.format(prev_max_acc))
             print('*******************************')
 
         if prev_max_acc > max_acc_overall['value']:
