@@ -170,9 +170,30 @@ def classify_nusvm_cross_valid(data_pp, data_pnp, nu, selected_channels, channel
 
 
 def classify_nusvm_param_seach(data_pp, data_pnp, nu_lowest, nu_highest, nu_step_size, channel_names,
+                               constrain_channels=None,
                                pca_components=None,
                                verbose=False, log_db_name=None, log_txt=True, log_proc_method=None,
                                log_dataset=None, log_notes=None, log_location='./results/', log_details=False):
+    """
+    :param data_pp:
+    :param data_pnp:
+    :param nu_lowest:
+    :param nu_highest:
+    :param nu_step_size:
+    :param channel_names:
+    :param constrain_channels: if set as list of channel names, only channels that appear in both sets will be considered
+    :param pca_components:
+    :param verbose:
+    :param log_db_name:
+    :param log_txt:
+    :param log_proc_method:
+    :param log_dataset:
+    :param log_notes:
+    :param log_location:
+    :param log_details:
+    :return:
+    """
+
     max_acc_overall = {'channels': [], 'value': 0, 'nu': 0}
 
     if pca_components and log_notes:
@@ -185,14 +206,20 @@ def classify_nusvm_param_seach(data_pp, data_pnp, nu_lowest, nu_highest, nu_step
 
         n_channels = len(channel_names)
 
+        nu_ok = True
+
         max_acc = {'index': 0, 'value': 0}
-        while max_acc['value'] >= prev_max_acc:
+        while max_acc['value'] >= prev_max_acc and nu_ok:
             max_acc = {'index': 0, 'value': 0}
             for channel in range(n_channels):
 
                 try:
                     if channel in previous_channels:
                         continue
+
+                    if constrain_channels:
+                        if not channel_names[channel] in constrain_channels:
+                            continue
 
                     selected_channels = previous_channels + [channel]
 
@@ -215,6 +242,7 @@ def classify_nusvm_param_seach(data_pp, data_pnp, nu_lowest, nu_highest, nu_step
                         max_acc['nu'] = param_nu
                 except ValueError:
                     print('Nu value', param_nu, 'is infeasible.')
+                    nu_ok = False
 
             if max_acc['value'] >= prev_max_acc:
                 prev_max_acc = max_acc['value']
@@ -232,7 +260,7 @@ def classify_nusvm_param_seach(data_pp, data_pnp, nu_lowest, nu_highest, nu_step
     return max_acc_overall
 
 
-def classify_nusvm_param_pca_seach(data_pp, data_pnp, nu_lowest, nu_highest, nu_step_size, channel_names,
+def classify_nusvm_param_pca_seach(data_pp, data_pnp, nu_lowest, nu_highest, nu_step_size, channel_names, constrain_channels=None,
                                    verbose=False, log_db_name=None, log_txt=True, log_proc_method=None,
                                    log_dataset=None, log_notes=None, log_location='./results/', log_details=False):
     max_acc_overall = {'channels': [], 'value': 0, 'nu': 0, 'components': 0}
@@ -248,6 +276,8 @@ def classify_nusvm_param_pca_seach(data_pp, data_pnp, nu_lowest, nu_highest, nu_
 
         n_channels = len(channel_names)
 
+        nu_ok = True
+
         max_acc = {'index': 0, 'value': 0, 'components': 0}
         while max_acc['value'] >= prev_max_acc:
             max_acc = {'index': 0, 'value': 0, 'components': 0}
@@ -256,6 +286,10 @@ def classify_nusvm_param_pca_seach(data_pp, data_pnp, nu_lowest, nu_highest, nu_
                 try:
                     if channel in previous_channels:
                         continue
+
+                    if constrain_channels:
+                        if not channel_names[channel] in constrain_channels:
+                            continue
 
                     selected_channels = previous_channels + [channel]
 
@@ -286,6 +320,8 @@ def classify_nusvm_param_pca_seach(data_pp, data_pnp, nu_lowest, nu_highest, nu_
 
                 except ValueError:
                     print('Error: specified nu is infeasible')
+                    nu_ok = False
+
 
             if max_acc['value'] >= prev_max_acc:
                 prev_max_acc = max_acc['value']
