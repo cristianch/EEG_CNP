@@ -279,7 +279,7 @@ def classify_nusvm_param_pca_seach(data_pp, data_pnp, nu_lowest, nu_highest, nu_
         nu_ok = True
 
         max_acc = {'index': 0, 'value': 0, 'components': 0}
-        while max_acc['value'] >= prev_max_acc:
+        while max_acc['value'] >= prev_max_acc and nu_ok:
             max_acc = {'index': 0, 'value': 0, 'components': 0}
             for channel in range(n_channels):
 
