@@ -64,7 +64,7 @@ def classify_linear_nusvm_with_valid(data_pp, data_pnp, nu, selected_channels, t
     test_labels = [test_label] * len(test)
 
     if verbose:
-        print('Test index', test_index, 'Preparing to classify set of', pp_train_len, 'PP and', pnp_train_len, 'PNP.')
+        print('Test index', test_index, 'Test label', test_label, 'Preparing to classify set of', pp_train_len, 'PP and', pnp_train_len, 'PNP.')
 
     clas = svm.NuSVC(nu=nu, kernel='linear', probability=probability)
     clas.fit(train, labels)
@@ -75,7 +75,7 @@ def classify_linear_nusvm_with_valid(data_pp, data_pnp, nu, selected_channels, t
     pred_labels = np.around(clas.predict_proba(test), 3) if probability else clas.predict(test)
 
     if verbose:
-        print('Train score:', train_acc, '  Test score:', test_acc)
+        print('Train score:', train_acc, '  Test score:', test_acc, 'Intercept:', clas.intercept_)
 
     return test_acc, tp, tn, fp, fn, test_label, pred_labels
 
@@ -108,6 +108,7 @@ def classify_nusvm_cross_valid(data_pp, data_pnp, nu, selected_channels, channel
     patients_correct = 0
     n_patients = len(data_pp) + len(data_pnp)
     details = []
+    scores = []
     probability = log_details
 
     for i in range(n_patients):
@@ -124,8 +125,10 @@ def classify_nusvm_cross_valid(data_pp, data_pnp, nu, selected_channels, channel
         if score > 0.5:
             patients_correct += 1
 
+        scores.append(score)
+
         if log_details:
-            details.append({'true label': tl, 'predicted probabilities': pl.tolist()})
+            details.append({'true label': tl, 'predicted probabilities': pl.tolist(), 'score': score})
 
     avg_accuracy = total_score / n_patients
     accuracy = (total_tp + total_tn) / (total_tp + total_tn + total_fp + total_fn)
@@ -165,6 +168,8 @@ def classify_nusvm_cross_valid(data_pp, data_pnp, nu, selected_channels, channel
 
     if verbose:
         print('Correctly labeled', patients_correct, 'out of', n_patients, 'accuracy', accuracy)
+        print('Patient scores:', scores)
+        print('Standard deviation:', np.std(scores))
 
     return accuracy, sensitivity, specificity, avg_accuracy
 
@@ -260,7 +265,8 @@ def classify_nusvm_param_seach(data_pp, data_pnp, nu_lowest, nu_highest, nu_step
     return max_acc_overall
 
 
-def classify_nusvm_param_pca_seach(data_pp, data_pnp, nu_lowest, nu_highest, nu_step_size, channel_names, constrain_channels=None,
+def classify_nusvm_param_pca_seach(data_pp, data_pnp, nu_lowest, nu_highest, nu_step_size, channel_names,
+                                   constrain_channels=None,
                                    verbose=False, log_db_name=None, log_txt=True, log_proc_method=None,
                                    log_dataset=None, log_notes=None, log_location='./results/', log_details=False):
     max_acc_overall = {'channels': [], 'value': 0, 'nu': 0, 'components': 0}
@@ -321,7 +327,6 @@ def classify_nusvm_param_pca_seach(data_pp, data_pnp, nu_lowest, nu_highest, nu_
                 except ValueError:
                     print('Error: specified nu is infeasible')
                     nu_ok = False
-
 
             if max_acc['value'] >= prev_max_acc:
                 prev_max_acc = max_acc['value']
