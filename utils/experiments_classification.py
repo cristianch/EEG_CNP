@@ -128,7 +128,7 @@ def classify_nusvm_cross_valid(data_pp, data_pnp, nu, selected_channels, channel
         scores.append(score)
 
         if log_details:
-            details.append({'true label': tl, 'predicted probabilities': pl.tolist(), 'score': score})
+            details.append({'true label': tl, 'predicted probabilities': pl.tolist(), 'score': score, 'stdev': np.std(scores)})
 
     avg_accuracy = total_score / n_patients
     accuracy = (total_tp + total_tn) / (total_tp + total_tn + total_fp + total_fn)
